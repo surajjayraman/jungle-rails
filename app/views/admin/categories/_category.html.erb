@@ -1,0 +1,11 @@
+<tr>
+  <td style="width: 60%">
+    <h4><%= category.name %></h4>
+  </td>
+  <td style="font-size: large">
+    <%= category.products.count() %>
+  </td>
+  <td style="font-size: large">
+    <%= category.products.sum(:quantity) %>
+  </td>
+</tr>
