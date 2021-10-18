@@ -20,7 +20,7 @@ RSpec.describe Product, type: :model do
 
     it 'is not valid without a price' do
       @category = Category.new()
-      @product = Product.new(name: 'Dog' , price: nil, quantity: 1, category: @category)
+      @product = Product.new(name: 'Dog' , price_cents: nil, quantity: 1, category: @category)
       @product.save
       expect(@product.errors.full_messages).to include("Price can't be blank")
       expect(@product).to_not be_valid
