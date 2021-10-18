@@ -48,7 +48,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'is not valid if the password does not have the minimum length' do
-      @user = User.new(first_name: 'Suraj, last_name: 'Nair', email: 'suraj@gmail.com', password: '12345', password_confirmation: '12345')
+      @user = User.new(first_name: 'Suraj', last_name: 'Nair', email: 'suraj@gmail.com', password: '12345', password_confirmation: '12345')
       expect(@user).to_not be_valid
     end
 
